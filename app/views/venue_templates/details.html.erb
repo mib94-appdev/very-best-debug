@@ -8,7 +8,7 @@
 
   <dt>Name</dt>
   <dd>
-    <p><%= @the_venue.name %></p>
+    <%= @the_venue.name %>
   </dd>
 
   <dt>Neighborhood</dt>
@@ -25,13 +25,13 @@
   <dd>
     <form action="/update_venue/<%= @the_venue.id %>">
       <label for="browser_venue">Address</label>
-      <input id="browser_venue" type="text" name="query_address" value="<%= @the_venue.address %>" placeholder="Enter an address...">
+      <input id="browser_venue" type="text" name="query_address" placeholder="Enter an address..." value="<%= @the_venue.address %>">
       
       <label for="browser_name">Name</label>
-      <input id="browser_name" type="text" name="query_name" value="<%= @the_venue.name %>" placeholder="Enter a name...">
+      <input id="browser_name" type="text" name="query_name" placeholder="Enter a name..." value="<%= @the_venue.name %>">
       
       <label for="browser_neighborhood">Neighborhood</label>
-      <input id="browser_neighborhood" type="text" name="query_neighborhood" value="<%= @the_venue.neighborhood %>" placeholder="Enter a neighborhood...">
+      <input id="browser_neighborhood" type="text" name="query_neighborhood" placeholder="Enter a neighborhood..." value="<%= @the_venue.neighborhood %>">
 
       <button>Update venue</button>
     </form>
@@ -39,7 +39,7 @@
 
   <dt>Delete venue</dt>
   <dd>
-    <a href="/delete_venue/<% @the_venue.id %>">
+    <a href="/delete_venue/<%= @the_venue.id %>">
       Delete this venue
     </a>
   </dd>
